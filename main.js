@@ -39,8 +39,6 @@ function handleSearchInput(){
   }
 }
 
-
-
 function handleSearchButton() {
   let dogSearched = inputDog.value;
   if(breedList.hasOwnProperty(dogSearched))
@@ -75,6 +73,7 @@ function handleSearchButton() {
 
 function handleResetButton (event) {
   inputDog.value = '';
+  inputDog.placeholder  = 'Buscar raza    🔍'
   listPhoto.innerHTML = '';
   resultNameDog.innerHTML = '';
 }
