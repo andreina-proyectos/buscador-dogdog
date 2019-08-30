@@ -28,7 +28,7 @@ if (lsNameDog) {
 
 //functions
 function handleSearchInput(){
-  const InputDogContent = inputDog.value;
+  const InputDogContent = inputDog.value.toLowerCase();
   if (InputDogContent) {
   resultNameDog.innerHTML = InputDogContent;
   localStorage.setItem('Dog-name', InputDogContent);
@@ -40,7 +40,7 @@ function handleSearchInput(){
 }
 
 function handleSearchButton() {
-  let dogSearched = inputDog.value;
+  let dogSearched = inputDog.value.toLowerCase();
   if(breedList.hasOwnProperty(dogSearched))
   {
     resultNameDog.innerHTML= `Raza de perro encontrada: ${dogSearched}`;
